@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沈阳理工大学简介</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, #004792 0%, #002954 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 41, 84, 0.2);
+        }
+        header h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* 主内容区 */
+        .intro-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+        .intro-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .intro-text h2 {
+            color: #004792;
+            border-left: 5px solid #E63946;
+            padding-left: 15px;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+        }
+        .intro-text p {
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        .image-placeholder {
+            flex: 1;
+            min-width: 300px;
+            background: linear-gradient(45deg, #e0e7ff, #f0f4ff);
+            border-radius: 15px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #004792;
+            border: 3px dashed #a5b4cb;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+        .image-placeholder:hover {
+            transform: translateY(-5px);
+        }
+        .image-placeholder i {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+        /* 特色卡片 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid #004792;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 41, 84, 0.15);
+        }
+        .feature-card h3 {
+            color: #004792;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .feature-card h3 i {
+            color: #E63946;
+        }
+        /* 院系列表 */
+        .departments {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+        }
+        .departments h2 {
+            color: #004792;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        .dept-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            list-style: none;
+        }
+        .dept-list li {
+            background: #f0f7ff;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 500;
+            color: #004792;
+            border: 1px solid #cde1ff;
+            transition: all 0.3s;
+        }
+        .dept-list li:hover {
+            background: #004792;
+            color: white;
+            transform: scale(1.05);
+        }
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #002954;
+            color: white;
+            border-radius: 15px 15px 0 0;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #64b5f6;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+ .intro-section { flex-direction: column; }
+            .feature-card { padding: 1.5rem; }
+            .departments { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- 网站头部 -->
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-university"></i> 沈阳理工大学</h1>
+            <p>Shenyang Ligong University</p>
+            <p>始建于1948年 · 一所具有鲜明国防特色的多科性大学</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 简介图文区 -->
+        <section class="intro-section">
+            <div class="intro-text">
+                <h2>学校简介</h2>
+                <p>沈阳理工大学（Shenyang Ligong University）前身为中国人民解放军东北军区军工部工业专门学校，创建于1948年。学校是中华人民共和国国家国防科技工业局与辽宁省人民政府共建高校，辽宁省人民政府与中国兵器装备集团、中国兵器工业集团共建高校。</p>
+                <p>学校坐落在辽宁省沈阳市浑南区，占地面积113万平方米，建筑面积49万平方米。校园环境优美，教学科研设施完备。</p>
+                <p>学校以工为主，理、经、管、文、法、艺相结合，具有鲜明的国防特色。现有16个学院（系、部），58个本科专业，12个硕士学位授权一级学科，2个博士学位授权一级学科。</p>
+                <p>学校坚持“立德树人”根本任务，秉承“弘志励学，德才并蓄”的校训，致力于培养高级专门人才和进行科学研究，为国家和地方经济社会发展做出了重要贡献。</p>
+            </div>
+            <!-- 图片占位区：你需要替换这里的图片链接 -->
+            <div class="image-placeholder" id="mainImage">
+                <i class="fas fa-camera"></i>
+                <p>沈阳理工大学校园风景</p>
+                <p style="font-size:0.9rem; margin-top:10px;">（此处可替换为学校实景图）</p>
+                <!-- 示例：将下一行src中的链接替换为你找到的图片实际地址 -->
+                <!-- <img src="https://example.com/sylg-image.jpg" alt="沈阳理工大学" style="width:100%; height:100%; object-fit:cover; border-radius:12px;"> -->
+            </div>
+        </section>
+
+        <!-- 特色亮点 -->
+        <section class="features">
+            <div class="feature-card">
+                <h3><i class="fas fa-star"></i> 办学特色</h3>
+                <p>具有鲜明的国防特色，实行国家国防科技工业局与辽宁省人民政府共建机制。师资雄厚，现有专任教师1000余人。</p>
+            </div>
+            <div class="feature-card">
+                <h3><i class="fas fa-flask"></i> 学科优势</h3>
+                <p>拥有2个博士学位授权一级学科，12个硕士学位授权一级学科。机械工程、材料科学与工程等学科实力突出。</p>
+            </div>
+            <div class="feature-card">
+                <h3><i class="fas fa-graduation-cap"></i> 人才培养</h3>
+                <p>现有全日制在校生17000余人。毕业生就业率连续多年位居辽宁省高校前列，深受用人单位好评。</p>
+            </div>
+        </section>
+
+        <!-- 院系设置 -->
+        <section class="departments">
+            <h2><i class="fas fa-th-list"></i> 主要院系设置</h2>
+            <ul class="dept-list">
+                <li>机械工程学院</li>
+                <li>材料科学与工程学院</li>
+                <li>信息科学与工程学院</li>
+                <li>装备工程学院</li>
+                <li>汽车与交通学院</li>
+                <li>经济管理学院</li>
+                <li>理学院</li>
+                <li>外国语学院</li>
+                <li>环境与化学工程学院</li>
+                <li>艺术设计学院</li>
+                <li>马克思主义学院</li>
+                <li>体育部</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- 网站页脚 -->
+    <footer>
+        <div class="container">
+            <p>© 2023 沈阳理工大学简介 | 本页面为学术介绍用途</p>
+            <p>地址：辽宁省沈阳市浑南新区南屏中路6号 | 邮编：110159</p>
+            <p>了解更多请访问：<a href="https://www.sylu.edu.cn" target="_blank">学校官方网站</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单交互：点击图片占位区可提示用户如何更换图片
+        document.getElementById('mainImage').addEventListener('click', function() {
+            alert('提示：要更换此处的图片，请用图片实际网址替换代码中<img>标签的src属性。\n\n1. 在网上找到沈阳理工大学的图片\n2. 复制图片链接\n3. 在代码中替换第88行的示例链接');
+        });
+// 为院系标签添加点击效果
+        const deptItems = document.querySelectorAll('.dept-list li');
+        deptItems.forEach(item => {
+            item.addEventListener('click', function() {
+                this.style.backgroundColor = '#E63946';
+                this.style.color = 'white';
+                setTimeout(() => {
+                    this.style.backgroundColor = '';
+                    this.style.color = '';
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
